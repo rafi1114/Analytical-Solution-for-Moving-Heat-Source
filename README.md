@@ -1,26 +1,21 @@
-## Heat Transfer Model
+## Analytical Solution in Python for Moving Heat Source
 
-The temperature at time \( t \) is given by:
+The temperature at time **t** is given by:
 
-\[
-T(t) - T_0 = \frac{2 \eta Q}{\rho c (\pi / 3)^{3/2}} \int_0^t \frac{1}{\sqrt{\phi_x \phi_y \phi_z}} \exp \left( -3 \left( \frac{x^2}{\phi_x} + \frac{y^2}{\phi_y} + \frac{z^2}{\phi_z} \right) \right) dt'
-\]
+T(t) - T₀ = (2 η Q) / (ρ c (π / 3)^(3/2)) * ∫[0 to t] (1 / sqrt(φₓ φᵧ φ_z)) * exp(-3 * (x² / φₓ + y² / φᵧ + z² / φ_z)) dt'
 
-where:
+where, 
 
-\[
-\phi_i = 12 \alpha (t - t') + \sigma_i^2, \quad \text{for} \quad i = x, y, z
-\]
+φᵢ = 12 α (t - t') + σᵢ², for i = x, y, z
 
-and:
 
-- \( T(t) \) is the temperature at time \( t \),
-- \( T_0 \) is the initial preheat temperature,
-- \( Q \) is the beam power,
-- \( \eta \) is the absorption efficiency,
-- \( \rho \) is the material density,
-- \( c \) is the specific heat capacity,
-- \( \alpha = k / (\rho c) \) is the thermal diffusivity,
-- \( \sigma_x, \sigma_y, \sigma_z \) are the beam width parameters.
+with:
 
-This equation represents the heat diffusion from a moving **Gaussian** heat source, integrated over time using Rieman Sum.
+- **T(t)** = temperature at time **t**
+- **T₀** = initial preheat temperature
+- **Q** = beam power
+- **η** = absorption efficiency
+- **ρ** = material density
+- **c** = specific heat capacity
+- **α** = thermal diffusivity (k / (ρ c))
+- **σₓ, σᵧ, σ_z** = beam width parameters
